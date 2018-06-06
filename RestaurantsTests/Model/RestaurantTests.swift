@@ -20,7 +20,8 @@ class RestaurantTests: XCTestCase {
         let restaurant = Factory.createRestaurant()
         XCTAssertEqual(restaurant.restaurantId, 1038)
         XCTAssertEqual(restaurant.name, "Napoli Pizza")
-        // TODO: Add tests for cuisineTypes after CuisineTypes object is added
+        XCTAssertNotNil(restaurant.cuisineTypes?.first)
+        XCTAssertNotNil(restaurant.cuisineTypes?.last)
         XCTAssertEqual(restaurant.ratingStars, 5)
     }
 

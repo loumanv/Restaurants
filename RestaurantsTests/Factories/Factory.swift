@@ -39,4 +39,29 @@ class Factory {
         let dictionary = try! JSONSerialization.jsonObject(with: data, options: .allowFragments) as! JSONDictionary
         return Restaurant.array(json: dictionary)!
     }
+
+    static func createCuisineType() -> CuisineType {
+        let dictionary: JSONDictionary = [
+            "Id": 82,
+            "Name": "Pizza",
+            "SeoName": "pizza"
+        ]
+        return try! CuisineType(dictionary: dictionary)
+    }
+
+    static func createCuisineTypes() -> [CuisineType] {
+        let dictionary: [JSONDictionary] = [
+            [
+                "Id": 27,
+                "Name": "Italian",
+                "SeoName": "italian"
+            ],
+            [
+                "Id": 82,
+                "Name": "Pizza",
+                "SeoName": "pizza"
+            ]
+        ]
+        return CuisineType.array(cuisineTypesArray: dictionary)!
+    }
 }

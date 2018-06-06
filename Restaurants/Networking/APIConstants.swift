@@ -14,4 +14,10 @@ struct APIConstants {
         static let cuisineTypes = "CuisineTypes"
         static let ratingStars = "RatingStars"
     }
+
+    struct CuisineType {
+        static let cuisineTypeId = "Id"
+        static let name = "Name"
+        static let seoName = "SeoName"
+    }
 }

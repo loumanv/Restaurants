@@ -14,6 +14,9 @@
 		0319FA3B20C8945D0045FA88 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0319FA3920C894580045FA88 /* APIConstants.swift */; };
 		0319FA3E20C8948A0045FA88 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0319FA3D20C8948A0045FA88 /* AppError.swift */; };
 		0319FA3F20C8967F0045FA88 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0319FA3D20C8948A0045FA88 /* AppError.swift */; };
+		0319FA4120C8980A0045FA88 /* CuisineTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0319FA4020C8980A0045FA88 /* CuisineTypeTests.swift */; };
+		0319FA4320C898FE0045FA88 /* CuisineType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0319FA4220C898FE0045FA88 /* CuisineType.swift */; };
+		0319FA4420C898FE0045FA88 /* CuisineType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0319FA4220C898FE0045FA88 /* CuisineType.swift */; };
 		034911FE20C8771300307656 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034911FD20C8771300307656 /* AppDelegate.swift */; };
 		0349120020C8771300307656 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034911FF20C8771300307656 /* ViewController.swift */; };
 		0349120320C8771300307656 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0349120120C8771300307656 /* Main.storyboard */; };
@@ -38,6 +41,8 @@
 		0319FA3520C893980045FA88 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		0319FA3920C894580045FA88 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		0319FA3D20C8948A0045FA88 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		0319FA4020C8980A0045FA88 /* CuisineTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuisineTypeTests.swift; sourceTree = "<group>"; };
+		0319FA4220C898FE0045FA88 /* CuisineType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuisineType.swift; sourceTree = "<group>"; };
 		034911FA20C8771300307656 /* Restaurants.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Restaurants.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		034911FD20C8771300307656 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		034911FF20C8771300307656 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -205,6 +210,7 @@
 		0349122820C87A6F00307656 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0319FA4220C898FE0045FA88 /* CuisineType.swift */,
 				0319FA3520C893980045FA88 /* Restaurant.swift */,
 			);
 			path = Model;
@@ -213,6 +219,7 @@
 		0349122920C87A7D00307656 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0319FA4020C8980A0045FA88 /* CuisineTypeTests.swift */,
 				0349121220C8771600307656 /* RestaurantTests.swift */,
 			);
 			path = Model;
@@ -338,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0319FA4320C898FE0045FA88 /* CuisineType.swift in Sources */,
 				0319FA3A20C894580045FA88 /* APIConstants.swift in Sources */,
 				0349120020C8771300307656 /* ViewController.swift in Sources */,
 				0319FA3E20C8948A0045FA88 /* AppError.swift in Sources */,
@@ -350,11 +358,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0319FA4120C8980A0045FA88 /* CuisineTypeTests.swift in Sources */,
 				0319FA3B20C8945D0045FA88 /* APIConstants.swift in Sources */,
 				0319FA3420C87C590045FA88 /* Factory.swift in Sources */,
 				0319FA3F20C8967F0045FA88 /* AppError.swift in Sources */,
 				0349121320C8771600307656 /* RestaurantTests.swift in Sources */,
 				0319FA3720C8939C0045FA88 /* Restaurant.swift in Sources */,
+				0319FA4420C898FE0045FA88 /* CuisineType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

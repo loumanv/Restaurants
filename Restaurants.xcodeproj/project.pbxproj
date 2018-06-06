@@ -7,12 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0319FA3420C87C590045FA88 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0319FA3320C87C590045FA88 /* Factory.swift */; };
+		0319FA3620C893980045FA88 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0319FA3520C893980045FA88 /* Restaurant.swift */; };
+		0319FA3720C8939C0045FA88 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0319FA3520C893980045FA88 /* Restaurant.swift */; };
+		0319FA3A20C894580045FA88 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0319FA3920C894580045FA88 /* APIConstants.swift */; };
+		0319FA3B20C8945D0045FA88 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0319FA3920C894580045FA88 /* APIConstants.swift */; };
+		0319FA3E20C8948A0045FA88 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0319FA3D20C8948A0045FA88 /* AppError.swift */; };
+		0319FA3F20C8967F0045FA88 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0319FA3D20C8948A0045FA88 /* AppError.swift */; };
 		034911FE20C8771300307656 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034911FD20C8771300307656 /* AppDelegate.swift */; };
 		0349120020C8771300307656 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034911FF20C8771300307656 /* ViewController.swift */; };
 		0349120320C8771300307656 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0349120120C8771300307656 /* Main.storyboard */; };
 		0349120520C8771600307656 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0349120420C8771600307656 /* Assets.xcassets */; };
 		0349120820C8771600307656 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0349120620C8771600307656 /* LaunchScreen.storyboard */; };
-		0349121320C8771600307656 /* RestaurantsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0349121220C8771600307656 /* RestaurantsTests.swift */; };
+		0349121320C8771600307656 /* RestaurantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0349121220C8771600307656 /* RestaurantTests.swift */; };
+		0349122B20C87B2300307656 /* restaurants.json in Resources */ = {isa = PBXBuildFile; fileRef = 0349122A20C87B2300307656 /* restaurants.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +34,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0319FA3320C87C590045FA88 /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
+		0319FA3520C893980045FA88 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		0319FA3920C894580045FA88 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		0319FA3D20C8948A0045FA88 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		034911FA20C8771300307656 /* Restaurants.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Restaurants.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		034911FD20C8771300307656 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		034911FF20C8771300307656 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -34,8 +46,9 @@
 		0349120720C8771600307656 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0349120920C8771600307656 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0349120E20C8771600307656 /* RestaurantsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestaurantsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0349121220C8771600307656 /* RestaurantsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsTests.swift; sourceTree = "<group>"; };
+		0349121220C8771600307656 /* RestaurantTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTests.swift; sourceTree = "<group>"; };
 		0349121420C8771600307656 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0349122A20C87B2300307656 /* restaurants.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = restaurants.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +69,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0319FA3220C87C450045FA88 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				0319FA3320C87C590045FA88 /* Factory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		0319FA3820C8943C0045FA88 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				0319FA3920C894580045FA88 /* APIConstants.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		0319FA3C20C894780045FA88 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0319FA3D20C8948A0045FA88 /* AppError.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		034911F120C8771300307656 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				0349121E20C879B300307656 /* App */,
+				0319FA3820C8943C0045FA88 /* Networking */,
+				0349122720C87A6000307656 /* Restaurants */,
 			);
 			path = Restaurants;
 			sourceTree = "<group>";
@@ -85,8 +124,9 @@
 		0349121120C8771600307656 /* RestaurantsTests */ = {
 			isa = PBXGroup;
 			children = (
+				0319FA3220C87C450045FA88 /* Factories */,
+				0349122920C87A7D00307656 /* Model */,
 				0349122520C87A1B00307656 /* Supporting Files */,
-				0349121220C8771600307656 /* RestaurantsTests.swift */,
 			);
 			path = RestaurantsTests;
 			sourceTree = "<group>";
@@ -96,6 +136,7 @@
 			children = (
 				0349121F20C879BE00307656 /* AppDelegate */,
 				0349122120C879D600307656 /* Controllers */,
+				0319FA3C20C894780045FA88 /* Model */,
 				0349122420C87A0200307656 /* Resources */,
 				0349122320C879F300307656 /* Supporting Files */,
 				0349122220C879E400307656 /* Views */,
@@ -148,8 +189,33 @@
 			isa = PBXGroup;
 			children = (
 				0349121420C8771600307656 /* Info.plist */,
+				0349122A20C87B2300307656 /* restaurants.json */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0349122720C87A6000307656 /* Restaurants */ = {
+			isa = PBXGroup;
+			children = (
+				0349122820C87A6F00307656 /* Model */,
+			);
+			path = Restaurants;
+			sourceTree = "<group>";
+		};
+		0349122820C87A6F00307656 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0319FA3520C893980045FA88 /* Restaurant.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0349122920C87A7D00307656 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0349121220C8771600307656 /* RestaurantTests.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +310,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0349122B20C87B2300307656 /* restaurants.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,8 +338,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0319FA3A20C894580045FA88 /* APIConstants.swift in Sources */,
 				0349120020C8771300307656 /* ViewController.swift in Sources */,
+				0319FA3E20C8948A0045FA88 /* AppError.swift in Sources */,
 				034911FE20C8771300307656 /* AppDelegate.swift in Sources */,
+				0319FA3620C893980045FA88 /* Restaurant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +350,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0349121320C8771600307656 /* RestaurantsTests.swift in Sources */,
+				0319FA3B20C8945D0045FA88 /* APIConstants.swift in Sources */,
+				0319FA3420C87C590045FA88 /* Factory.swift in Sources */,
+				0319FA3F20C8967F0045FA88 /* AppError.swift in Sources */,
+				0349121320C8771600307656 /* RestaurantTests.swift in Sources */,
+				0319FA3720C8939C0045FA88 /* Restaurant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,7 +508,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K877UC2B8P;
-				INFOPLIST_FILE = Restaurants/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Restaurants/App/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,7 +526,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K877UC2B8P;
-				INFOPLIST_FILE = Restaurants/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Restaurants/App/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -471,7 +545,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K877UC2B8P;
-				INFOPLIST_FILE = RestaurantsTests/Info.plist;
+				INFOPLIST_FILE = "RestaurantsTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -492,7 +566,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K877UC2B8P;
-				INFOPLIST_FILE = RestaurantsTests/Info.plist;
+				INFOPLIST_FILE = "RestaurantsTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

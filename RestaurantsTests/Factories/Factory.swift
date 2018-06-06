@@ -28,7 +28,16 @@ class Factory {
                     "SeoName": "pizza"
                 ]
             ],
-            "RatingStars": 5
+            "RatingStars": 5.5
+        ]
+        return try! Restaurant(dictionary: dictionary)
+    }
+
+    static func createRestaurantNoRatingsAndCuisineTypes() -> Restaurant {
+
+        let dictionary: JSONDictionary = [
+            "Id": 1038,
+            "Name": "Napoli Pizza"
         ]
         return try! Restaurant(dictionary: dictionary)
     }

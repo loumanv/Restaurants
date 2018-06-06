@@ -19,7 +19,7 @@ class Restaurant {
     var restaurantId: Int
     var name: String
     var cuisineTypes: [CuisineType]?
-    var ratingStars: Int?
+    var ratingStars: Double?
 
     init(dictionary: JSONDictionary) throws {
 
@@ -29,7 +29,7 @@ class Restaurant {
         guard let name = dictionary[APIConstants.Restaurant.name] as? String else { throw RestaurantError.missingName}
         self.restaurantId = restaurantId
         self.name = name
-        self.ratingStars = dictionary[APIConstants.Restaurant.ratingStars] as? Int
+        self.ratingStars = dictionary[APIConstants.Restaurant.ratingStars] as? Double
         if let cuisineTypesJson = dictionary[APIConstants.Restaurant.cuisineTypes] as? [JSONDictionary] {
             self.cuisineTypes = CuisineType.array(cuisineTypesArray: cuisineTypesJson)
         }

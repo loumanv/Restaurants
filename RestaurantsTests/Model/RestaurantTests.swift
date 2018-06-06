@@ -22,7 +22,7 @@ class RestaurantTests: XCTestCase {
         XCTAssertEqual(restaurant.name, "Napoli Pizza")
         XCTAssertNotNil(restaurant.cuisineTypes?.first)
         XCTAssertNotNil(restaurant.cuisineTypes?.last)
-        XCTAssertEqual(restaurant.ratingStars, 5)
+        XCTAssertEqual(restaurant.ratingStars, 5.5)
     }
 
     func testRestaurantsInitializationSucceeds() {

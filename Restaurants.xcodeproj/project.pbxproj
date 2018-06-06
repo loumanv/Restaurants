@@ -77,12 +77,7 @@
 		034911FC20C8771300307656 /* Restaurants */ = {
 			isa = PBXGroup;
 			children = (
-				034911FD20C8771300307656 /* AppDelegate.swift */,
-				034911FF20C8771300307656 /* ViewController.swift */,
-				0349120120C8771300307656 /* Main.storyboard */,
-				0349120420C8771600307656 /* Assets.xcassets */,
-				0349120620C8771600307656 /* LaunchScreen.storyboard */,
-				0349120920C8771600307656 /* Info.plist */,
+				0349121E20C879B300307656 /* App */,
 			);
 			path = Restaurants;
 			sourceTree = "<group>";
@@ -90,10 +85,71 @@
 		0349121120C8771600307656 /* RestaurantsTests */ = {
 			isa = PBXGroup;
 			children = (
+				0349122520C87A1B00307656 /* Supporting Files */,
 				0349121220C8771600307656 /* RestaurantsTests.swift */,
-				0349121420C8771600307656 /* Info.plist */,
 			);
 			path = RestaurantsTests;
+			sourceTree = "<group>";
+		};
+		0349121E20C879B300307656 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0349121F20C879BE00307656 /* AppDelegate */,
+				0349122120C879D600307656 /* Controllers */,
+				0349122420C87A0200307656 /* Resources */,
+				0349122320C879F300307656 /* Supporting Files */,
+				0349122220C879E400307656 /* Views */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		0349121F20C879BE00307656 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				034911FD20C8771300307656 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		0349122120C879D600307656 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				034911FF20C8771300307656 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0349122220C879E400307656 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0349120120C8771300307656 /* Main.storyboard */,
+				0349120620C8771600307656 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0349122320C879F300307656 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0349120920C8771600307656 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0349122420C87A0200307656 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0349120420C8771600307656 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0349122520C87A1B00307656 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0349121420C8771600307656 /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

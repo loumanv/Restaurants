@@ -29,6 +29,7 @@
 		033676F220C9876700DDE5F9 /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033676F020C9876700DDE5F9 /* RestaurantCell.swift */; };
 		033676F320C9876700DDE5F9 /* RestaurantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 033676F120C9876700DDE5F9 /* RestaurantCell.xib */; };
 		033F64A020C9969A00478FE8 /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033676F020C9876700DDE5F9 /* RestaurantCell.swift */; };
+		033F64A320C9990E00478FE8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033F64A220C9990E00478FE8 /* Alamofire.framework */; };
 		034911FE20C8771300307656 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034911FD20C8771300307656 /* AppDelegate.swift */; };
 		0349120520C8771600307656 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0349120420C8771600307656 /* Assets.xcassets */; };
 		0349120820C8771600307656 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0349120620C8771600307656 /* LaunchScreen.storyboard */; };
@@ -70,6 +71,7 @@
 		033676EA20C9842D00DDE5F9 /* RestaurantsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantsViewController.xib; sourceTree = "<group>"; };
 		033676F020C9876700DDE5F9 /* RestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
 		033676F120C9876700DDE5F9 /* RestaurantCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantCell.xib; sourceTree = "<group>"; };
+		033F64A220C9990E00478FE8 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		034911FA20C8771300307656 /* Restaurants.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Restaurants.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		034911FD20C8771300307656 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0349120420C8771600307656 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				033F64A320C9990E00478FE8 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,12 +165,21 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		033F64A120C9990E00478FE8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				033F64A220C9990E00478FE8 /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		034911F120C8771300307656 = {
 			isa = PBXGroup;
 			children = (
 				034911FC20C8771300307656 /* Restaurants */,
 				0349121120C8771600307656 /* RestaurantsTests */,
 				034911FB20C8771300307656 /* Products */,
+				033F64A120C9990E00478FE8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -341,6 +353,7 @@
 				034911F720C8771300307656 /* Frameworks */,
 				034911F820C8771300307656 /* Resources */,
 				0349121D20C8786400307656 /* SwiftLint */,
+				033F64A420C9991C00478FE8 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -434,6 +447,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		033F64A420C9991C00478FE8 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
 		0349121D20C8786400307656 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -634,6 +663,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K877UC2B8P;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Restaurants/App/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -652,6 +685,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K877UC2B8P;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Restaurants/App/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -72,4 +72,9 @@ class Factory {
         ]
         return CuisineType.array(cuisineTypesArray: dictionary)!
     }
+
+    static func createRestarantsViewModel() -> RestaurantsViewModel {
+        let restaurants = Factory.createRestaurants()
+        return RestaurantsViewModel(restaurants: restaurants)
+    }
 }

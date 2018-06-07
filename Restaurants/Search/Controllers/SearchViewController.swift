@@ -18,7 +18,7 @@ class SearchViewController: UIViewController {
     @IBOutlet private weak var searchField: UITextField!
     @IBOutlet private weak var searchButton: UIButton!
 
-    var controllerOutput: SearchViewControllerOutput
+    private(set) var controllerOutput: SearchViewControllerOutput
 
     init(controllerOutput: SearchViewControllerOutput) {
         self.controllerOutput = controllerOutput

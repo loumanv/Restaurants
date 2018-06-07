@@ -19,6 +19,8 @@ class AppNavigationController {
 extension AppNavigationController: SearchViewControllerOutput {
 
     func searchButtonTapped(sender: UIViewController, outcode: String) {
-        // TODO: Initialise next view controller
+        let viewModel = Factory.createRestarantsViewModel()
+        let restaurantsVC = RestaurantsViewController(viewModel: viewModel)
+        navigationController.pushViewController(restaurantsVC, animated: true)
     }
 }

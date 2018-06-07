@@ -16,10 +16,10 @@ enum RestaurantError: LocalizedError {
 
 class Restaurant {
 
-    var restaurantId: Int
-    var name: String
-    var cuisineTypes: [CuisineType]?
-    var ratingStars: Double?
+    private(set) var restaurantId: Int
+    private(set) var name: String
+    private(set) var cuisineTypes: [CuisineType]?
+    private(set) var ratingStars: Double?
 
     init(dictionary: JSONDictionary) throws {
 

@@ -10,7 +10,7 @@ import Foundation
 
 class RestaurantsViewModel {
 
-    var restaurants: [Restaurant]
+    private(set) var restaurants: [Restaurant]
 
     init(restaurants: [Restaurant]) {
         self.restaurants = restaurants

@@ -15,9 +15,9 @@ enum CuisineTypeError: LocalizedError {
 
 class CuisineType {
 
-    internal var cuisineTypeId: Int
-    internal var name: String
-    internal var seoName: String?
+    private(set) var cuisineTypeId: Int
+    private(set) var name: String
+    private(set) var seoName: String?
 
     init(dictionary: JSONDictionary) throws {
         guard let cuisineTypeId = dictionary[APIConstants.CuisineType.cuisineTypeId] as? Int else {

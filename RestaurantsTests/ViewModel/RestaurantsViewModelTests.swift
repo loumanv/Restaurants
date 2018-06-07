@@ -12,14 +12,13 @@ import XCTest
 class RestaurantsViewModelTests: XCTestCase {
 
     func testRestaurantsViewModelInitializationSucceeds() {
-        let restaurants = Factory.createRestaurants()
-        let viewModel = RestaurantsViewModel(restaurants: restaurants)
+        let viewModel = Factory.createRestarantsViewModel()
+
         XCTAssertNotNil(viewModel)
     }
 
     func testRestaurantsViewModelReturnsTheCorrectInfo() {
-        let restaurants = Factory.createRestaurants()
-        let viewModel = RestaurantsViewModel(restaurants: restaurants)
+        let viewModel = Factory.createRestarantsViewModel()
 
         XCTAssertEqual(viewModel.restaurantNameFor(row: 0), "Napoli Pizza")
         XCTAssertEqual(viewModel.ratingStarsFor(row: 0), "5.5/6.0")

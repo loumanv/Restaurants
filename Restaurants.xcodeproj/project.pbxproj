@@ -32,6 +32,9 @@
 		0372ABCD20C8AF680006EE9A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0372ABCB20C8AF680006EE9A /* SearchViewController.swift */; };
 		0372ABCE20C8AF680006EE9A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0372ABCB20C8AF680006EE9A /* SearchViewController.swift */; };
 		0372ABCF20C8AF680006EE9A /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0372ABCC20C8AF680006EE9A /* SearchViewController.xib */; };
+		0372ABD520C9754A0006EE9A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0372ABD420C9754A0006EE9A /* Localizable.strings */; };
+		0372ABD620C9754A0006EE9A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0372ABD420C9754A0006EE9A /* Localizable.strings */; };
+		0372ABD920C97C5D0006EE9A /* SearchViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0372ABD720C97C5D0006EE9A /* SearchViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,8 @@
 		0372ABBF20C8AD2A0006EE9A /* AppNavigationControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationControllerTests.swift; sourceTree = "<group>"; };
 		0372ABCB20C8AF680006EE9A /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		0372ABCC20C8AF680006EE9A /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		0372ABD420C9754A0006EE9A /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		0372ABD720C97C5D0006EE9A /* SearchViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				0349120420C8771600307656 /* Assets.xcassets */,
+				0372ABD420C9754A0006EE9A /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -260,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				0372ABBF20C8AD2A0006EE9A /* AppNavigationControllerTests.swift */,
+				0372ABD720C97C5D0006EE9A /* SearchViewControllerTests.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -372,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0349120820C8771600307656 /* LaunchScreen.storyboard in Resources */,
+				0372ABD520C9754A0006EE9A /* Localizable.strings in Resources */,
 				0349120520C8771600307656 /* Assets.xcassets in Resources */,
 				0372ABCF20C8AF680006EE9A /* SearchViewController.xib in Resources */,
 			);
@@ -382,6 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0349122B20C87B2300307656 /* restaurants.json in Resources */,
+				0372ABD620C9754A0006EE9A /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +442,7 @@
 				0349121320C8771600307656 /* RestaurantTests.swift in Sources */,
 				0372ABCE20C8AF680006EE9A /* SearchViewController.swift in Sources */,
 				0319FA4A20C8A02A0045FA88 /* RestaurantsViewModel.swift in Sources */,
+				0372ABD920C97C5D0006EE9A /* SearchViewControllerTests.swift in Sources */,
 				0319FA3720C8939C0045FA88 /* Restaurant.swift in Sources */,
 				0372ABC720C8AEB70006EE9A /* AppNavigationController.swift in Sources */,
 				0319FA4D20C8A0530045FA88 /* RestaurantsViewModelTests.swift in Sources */,

@@ -19,6 +19,8 @@ class AppNavigationControllerTests: XCTestCase {
 
     func testInitialNavigationControllerContainsASearchViewController() {
         let navigationController = AppNavigationController.sharedInstance.navigationController
-        XCTAssertTrue(navigationController.viewControllers.first!.isKind(of: SearchViewController.self))
+        let rootVC = navigationController.viewControllers.first
+        XCTAssertTrue(rootVC!.isKind(of: SearchViewController.self))
+        XCTAssertNotNil((rootVC as! SearchViewController).controllerOutput)
     }
 }

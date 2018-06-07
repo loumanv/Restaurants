@@ -12,6 +12,13 @@ class AppNavigationController {
     static let sharedInstance = AppNavigationController()
 
     lazy var navigationController: UINavigationController = {
-        return UINavigationController(rootViewController: SearchViewController())
+        return UINavigationController(rootViewController: SearchViewController(controllerOutput: self))
     }()
+}
+
+extension AppNavigationController: SearchViewControllerOutput {
+
+    func searchButtonTapped(sender: UIViewController, outcode: String) {
+        // TODO: Initialise next view controller
+    }
 }

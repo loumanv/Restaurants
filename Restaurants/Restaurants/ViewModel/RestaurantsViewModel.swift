@@ -29,4 +29,10 @@ class RestaurantsViewModel {
         let names = restaurants[row].cuisineTypes?.compactMap { $0.name }
         return names?.joined(separator: ", ") ?? "N/A"
     }
+
+    func logoImageURLFor(row: Int) -> URL? {
+        guard let standardLogoUrl = restaurants[row].standardLogoUrl,
+              let imageURL = URL(string: standardLogoUrl) else { return nil }
+        return imageURL
+    }
 }

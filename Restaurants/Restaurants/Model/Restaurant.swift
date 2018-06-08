@@ -18,6 +18,7 @@ class Restaurant {
     private(set) var name: String
     private(set) var cuisineTypes: [CuisineType]?
     private(set) var ratingStars: Double?
+    private(set) var standardLogoUrl: String?
 
     init(dictionary: JSONDictionary) throws {
 
@@ -30,6 +31,10 @@ class Restaurant {
         self.ratingStars = dictionary[APIConstants.Restaurant.ratingStars] as? Double
         if let cuisineTypesJson = dictionary[APIConstants.Restaurant.cuisineTypes] as? [JSONDictionary] {
             self.cuisineTypes = CuisineType.array(cuisineTypesArray: cuisineTypesJson)
+        }
+        if let logosArray = dictionary[APIConstants.Restaurant.logoKey] as? [JSONDictionary],
+           let logoDictionary = logosArray.first {
+            self.standardLogoUrl = logoDictionary[APIConstants.Restaurant.logoStandardResolutionURL] as? String
         }
     }
 }

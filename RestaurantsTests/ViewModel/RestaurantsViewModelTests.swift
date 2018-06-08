@@ -11,18 +11,10 @@ import XCTest
 
 class RestaurantsViewModelTests: XCTestCase {
 
+    let viewModel = Factory.createRestarantsViewModel()
+
     func testRestaurantsViewModelInitializationSucceeds() {
-        let viewModel = Factory.createRestarantsViewModel()
-
         XCTAssertNotNil(viewModel)
-    }
-
-    func testRestaurantsViewModelReturnsTheCorrectInfo() {
-        let viewModel = Factory.createRestarantsViewModel()
-
-        XCTAssertEqual(viewModel.restaurantNameFor(row: 0), "Napoli Pizza")
-        XCTAssertEqual(viewModel.ratingStarsFor(row: 0), "5.5/6.0")
-        XCTAssertEqual(viewModel.typesOfFoodFor(row: 0), "Italian, Pizza")
     }
 
     func testRestaurantsViewModelReturnsTheCorrectInfoForEmptyRatingAndCuisineTypes() {
@@ -32,5 +24,22 @@ class RestaurantsViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.restaurantNameFor(row: 0), "Napoli Pizza")
         XCTAssertEqual(viewModel.ratingStarsFor(row: 0), "N/A")
         XCTAssertEqual(viewModel.typesOfFoodFor(row: 0), "N/A")
+    }
+
+    func testRestaurantNameForRow() {
+        XCTAssertEqual(viewModel.restaurantNameFor(row: 0), "Napoli Pizza")
+    }
+
+    func testRatingStarsForRow() {
+        XCTAssertEqual(viewModel.ratingStarsFor(row: 0), "5.5/6.0")
+    }
+
+    func testTypesOfFoodForRow() {
+        XCTAssertEqual(viewModel.typesOfFoodFor(row: 0), "Italian, Pizza")
+    }
+
+    func testLogoImageURLForRow() {
+        let expectedImageUrl = URL(string: "http://d30v2pzvrfyzpo.cloudfront.net/uk/images/restaurants/1038.gif")
+        XCTAssertEqual(viewModel.logoImageURLFor(row: 0), expectedImageUrl)
     }
 }

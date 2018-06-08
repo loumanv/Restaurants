@@ -27,7 +27,12 @@ class Factory {
                     "SeoName": "pizza"
                 ]
             ],
-            "RatingStars": 5.5
+            "RatingStars": 5.5,
+            "Logo": [
+                [
+                    "StandardResolutionURL": "http://d30v2pzvrfyzpo.cloudfront.net/uk/images/restaurants/1038.gif"
+                ]
+            ]
         ]
         return try! Restaurant(dictionary: dictionary)
     }

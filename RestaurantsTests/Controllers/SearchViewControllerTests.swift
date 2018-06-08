@@ -12,7 +12,7 @@ import XCTest
 class MockViewController: UIViewController, SearchViewControllerOutput {
     var delegateMethodCalled = false
 
-    func searchButtonTapped(sender: UIViewController, outcode: String) {
+    func searchButtonTapped(sender: SearchViewController, outcode: String) {
         delegateMethodCalled = true
     }
 }

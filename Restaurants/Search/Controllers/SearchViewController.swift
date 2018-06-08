@@ -9,10 +9,10 @@
 import UIKit
 
 protocol SearchViewControllerOutput {
-    func searchButtonTapped(sender: UIViewController, outcode: String)
+    func searchButtonTapped(sender: SearchViewController, outcode: String)
 }
 
-class SearchViewController: UIViewController {
+class SearchViewController: UIViewController, ContentLoadable {
 
     @IBOutlet private weak var searchTitle: UILabel!
     @IBOutlet private weak var searchField: UITextField!

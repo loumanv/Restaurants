@@ -18,9 +18,19 @@ class AppNavigationController {
 
 extension AppNavigationController: SearchViewControllerOutput {
 
-    func searchButtonTapped(sender: UIViewController, outcode: String) {
-        let viewModel = Factory.createRestarantsViewModel()
-        let restaurantsVC = RestaurantsViewController(viewModel: viewModel)
-        navigationController.pushViewController(restaurantsVC, animated: true)
+    func searchButtonTapped(sender: SearchViewController, outcode: String) {
+        sender.showActivityIndicator()
+        NetworkClient.shared.loadRestaurants(outcode: outcode) { [navigationController] (restaurants, error) in
+            sender.removeActivityIndicator()
+            guard error == nil, let restaurants = restaurants else {
+                // Show appropriate error message
+                sender.showErrorMessage(title: "No restaurants", message: "No restaurants in this area")
+                return
+            }
+            let viewModel = RestaurantsViewModel(restaurants: restaurants)
+            let restaurantsVC = RestaurantsViewController(viewModel: viewModel)
+            navigationController.pushViewController(restaurantsVC, animated: true)
+        }
+
     }
 }

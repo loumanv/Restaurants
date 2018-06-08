@@ -38,27 +38,52 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ene-Cs-4kC">
+                        <rect key="frame" x="0.0" y="5" width="58" height="70"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="P9g-uP-anV">
+                                <rect key="frame" x="4" y="10" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Ifc-BB-mcu"/>
+                                    <constraint firstAttribute="width" constant="50" id="i3e-K1-2Iv"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="P9g-uP-anV" firstAttribute="centerY" secondItem="Ene-Cs-4kC" secondAttribute="centerY" id="Ryl-5V-je1"/>
+                            <constraint firstItem="P9g-uP-anV" firstAttribute="centerX" secondItem="Ene-Cs-4kC" secondAttribute="centerX" id="kXE-pW-dMB"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="Ene-Cs-4kC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="O1h-RF-Chc"/>
                     <constraint firstItem="iBU-bh-2ry" firstAttribute="top" secondItem="O6e-eR-Njh" secondAttribute="bottom" id="Pp7-Jr-70P"/>
                     <constraint firstItem="iBU-bh-2ry" firstAttribute="width" secondItem="osR-GV-ERU" secondAttribute="width" id="RrQ-Sd-5iP"/>
                     <constraint firstItem="O6e-eR-Njh" firstAttribute="trailing" secondItem="osR-GV-ERU" secondAttribute="trailing" id="SxB-v1-mEm"/>
+                    <constraint firstItem="Ene-Cs-4kC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="T5j-hI-z1J"/>
                     <constraint firstItem="O6e-eR-Njh" firstAttribute="width" secondItem="osR-GV-ERU" secondAttribute="width" id="Teu-7q-MFN"/>
                     <constraint firstItem="osR-GV-ERU" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.8" id="buS-bS-00N"/>
                     <constraint firstItem="O6e-eR-Njh" firstAttribute="top" secondItem="osR-GV-ERU" secondAttribute="bottom" id="fIt-7K-Oib"/>
                     <constraint firstAttribute="bottom" secondItem="iBU-bh-2ry" secondAttribute="bottom" constant="5" id="iyN-LF-bA6"/>
                     <constraint firstAttribute="trailing" secondItem="osR-GV-ERU" secondAttribute="trailing" constant="6" id="jLm-Yi-KMu"/>
+                    <constraint firstItem="osR-GV-ERU" firstAttribute="leading" secondItem="Ene-Cs-4kC" secondAttribute="trailing" id="kld-Po-ruc"/>
                     <constraint firstItem="iBU-bh-2ry" firstAttribute="trailing" secondItem="osR-GV-ERU" secondAttribute="trailing" id="nJU-fz-xz5"/>
+                    <constraint firstAttribute="bottom" secondItem="Ene-Cs-4kC" secondAttribute="bottom" constant="5" id="oN8-68-gMG"/>
                     <constraint firstItem="osR-GV-ERU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="uiX-4P-SaJ"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="cuisineTypesLabel" destination="iBU-bh-2ry" id="15y-Mc-GrO"/>
+                <outlet property="logoImageView" destination="P9g-uP-anV" id="Za7-aV-DRU"/>
                 <outlet property="nameLabel" destination="osR-GV-ERU" id="8vx-sC-GC7"/>
                 <outlet property="ratingLabel" destination="O6e-eR-Njh" id="FNd-Zg-9tg"/>
             </connections>
             <point key="canvasLocation" x="25" y="-115"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="placeholderImage" width="68" height="63"/>
+    </resources>
 </document>

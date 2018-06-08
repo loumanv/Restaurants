@@ -13,4 +13,12 @@ class RestaurantCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var cuisineTypesLabel: UILabel!
+    @IBOutlet weak var logoImageView: UIImageView!
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        logoImageView.af_cancelImageRequest()
+        logoImageView.layer.removeAllAnimations()
+        logoImageView.image = nil
+    }
 }

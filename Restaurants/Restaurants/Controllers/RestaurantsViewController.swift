@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class RestaurantsViewController: UIViewController {
 
@@ -49,6 +50,9 @@ extension RestaurantsViewController: UITableViewDataSource {
         cell.nameLabel.text = viewModel.restaurantNameFor(row: indexPath.row)
         cell.ratingLabel.text = viewModel.ratingStarsFor(row: indexPath.row)
         cell.cuisineTypesLabel.text = viewModel.typesOfFoodFor(row: indexPath.row)
+        if let logoImageUrl = viewModel.logoImageURLFor(row: indexPath.row) {
+            cell.logoImageView.af_setImage(withURL: logoImageUrl, imageTransition: .crossDissolve(0.30))
+        }
         return cell
     }
 }

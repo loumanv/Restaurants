@@ -30,6 +30,10 @@
 		033676F320C9876700DDE5F9 /* RestaurantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 033676F120C9876700DDE5F9 /* RestaurantCell.xib */; };
 		033F64A020C9969A00478FE8 /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033676F020C9876700DDE5F9 /* RestaurantCell.swift */; };
 		033F64A320C9990E00478FE8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033F64A220C9990E00478FE8 /* Alamofire.framework */; };
+		033F64A620C99A3200478FE8 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F64A520C99A3200478FE8 /* NetworkClient.swift */; };
+		033F64A720C9E62500478FE8 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F64A520C99A3200478FE8 /* NetworkClient.swift */; };
+		033F64A920C9E68D00478FE8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033F64A220C9990E00478FE8 /* Alamofire.framework */; };
+		033F64AE20CA7F9300478FE8 /* NetworkClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F64AD20CA7F9300478FE8 /* NetworkClientTests.swift */; };
 		034911FE20C8771300307656 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034911FD20C8771300307656 /* AppDelegate.swift */; };
 		0349120520C8771600307656 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0349120420C8771600307656 /* Assets.xcassets */; };
 		0349120820C8771600307656 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0349120620C8771600307656 /* LaunchScreen.storyboard */; };
@@ -72,6 +76,8 @@
 		033676F020C9876700DDE5F9 /* RestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
 		033676F120C9876700DDE5F9 /* RestaurantCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantCell.xib; sourceTree = "<group>"; };
 		033F64A220C9990E00478FE8 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		033F64A520C99A3200478FE8 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		033F64AD20CA7F9300478FE8 /* NetworkClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientTests.swift; sourceTree = "<group>"; };
 		034911FA20C8771300307656 /* Restaurants.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Restaurants.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		034911FD20C8771300307656 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0349120420C8771600307656 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -101,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				033F64A920C9E68D00478FE8 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				0319FA3920C894580045FA88 /* APIConstants.swift */,
+				033F64A520C99A3200478FE8 /* NetworkClient.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -302,6 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				0319FA4020C8980A0045FA88 /* CuisineTypeTests.swift */,
+				033F64AD20CA7F9300478FE8 /* NetworkClientTests.swift */,
 				0349121220C8771600307656 /* RestaurantTests.swift */,
 			);
 			path = Model;
@@ -371,6 +380,7 @@
 				0349120A20C8771600307656 /* Sources */,
 				0349120B20C8771600307656 /* Frameworks */,
 				0349120C20C8771600307656 /* Resources */,
+				033F64A820C9E65000478FE8 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -463,6 +473,22 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
+		033F64A820C9E65000478FE8 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
 		0349121D20C8786400307656 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -495,6 +521,7 @@
 				033676F220C9876700DDE5F9 /* RestaurantCell.swift in Sources */,
 				034911FE20C8771300307656 /* AppDelegate.swift in Sources */,
 				0319FA3620C893980045FA88 /* Restaurant.swift in Sources */,
+				033F64A620C99A3200478FE8 /* NetworkClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,6 +537,8 @@
 				0349121320C8771600307656 /* RestaurantTests.swift in Sources */,
 				0372ABCE20C8AF680006EE9A /* SearchViewController.swift in Sources */,
 				033676E720C9826300DDE5F9 /* RestaurantsViewControllerTests.swift in Sources */,
+				033F64A720C9E62500478FE8 /* NetworkClient.swift in Sources */,
+				033F64AE20CA7F9300478FE8 /* NetworkClientTests.swift in Sources */,
 				033F64A020C9969A00478FE8 /* RestaurantCell.swift in Sources */,
 				0319FA4A20C8A02A0045FA88 /* RestaurantsViewModel.swift in Sources */,
 				0372ABD920C97C5D0006EE9A /* SearchViewControllerTests.swift in Sources */,
@@ -708,6 +737,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K877UC2B8P;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "RestaurantsTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -729,6 +762,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K877UC2B8P;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "RestaurantsTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

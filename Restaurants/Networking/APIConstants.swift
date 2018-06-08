@@ -20,4 +20,21 @@ struct APIConstants {
         static let name = "Name"
         static let seoName = "SeoName"
     }
+
+    struct UrlStrings {
+        static let baseUrl = "https://public.je-apis.com"
+        static let restaurants = "/restaurants"
+        static let outcodeParameterKey = "q"
+    }
+
+    struct Header {
+        static let acceptTenantKey = "Accept-Tenant"
+        static let acceptLanguageKey = "Accept-Language"
+        static let authorizationKey = "Authorization"
+        static let hostKey = "Host"
+        static let acceptTenantValue = "uk"
+        static let acceptLanguageValue = "en-GB"
+        static let authorizationValue = "Basic VGVjaFRlc3Q6bkQ2NGxXVnZreDVw"
+        static let hostValue = "public.je-apis.com"
+    }
 }

@@ -7,8 +7,6 @@
 
 import Foundation
 
-typealias JSONDictionary = [String: Any]
-
 enum RestaurantError: LocalizedError {
     case missingRestaurantId
     case missingName

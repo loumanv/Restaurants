@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = AppNavigationController.sharedInstance.navigationController
+        self.window?.rootViewController = FlowController.shared.navigationController
         self.window?.makeKeyAndVisible()
 
         return true

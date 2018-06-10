@@ -1,3 +1,4 @@
 /* Search */
+"SearchTitle" = "Restaurants";
 "SearchButtonTitle" = "Search";
-"SearchFieldTitle" = "Search by outcode";
+"SearchFieldTitle" = "Search by postcode";

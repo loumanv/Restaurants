@@ -8,8 +8,9 @@
 
 import XCTest
 @testable import Restaurants
+import CoreLocation
 
-class MockViewController: UIViewController, SearchViewControllerOutput {
+class MockViewController: UIViewController, SearchViewControllerDelegate {
     var delegateMethodCalled = false
 
     func searchButtonTapped(sender: SearchViewController, outcode: String) {
@@ -17,18 +18,25 @@ class MockViewController: UIViewController, SearchViewControllerOutput {
     }
 }
 
+class MockLocationManager: CLLocationManager {
+    var startUpdatingLocationCalled = false
+
+    override func startUpdatingLocation() {
+        startUpdatingLocationCalled = true
+    }
+}
+
 class SearchViewControllerTests: XCTestCase {
 
     func testSearchViewControllerInitializationSucceeds() {
-        let mockVC = MockViewController()
-        let searchVC = SearchViewController(controllerOutput: mockVC)
+        let searchVC = SearchViewController()
         XCTAssertNotNil(searchVC)
-        XCTAssertNotNil(searchVC.controllerOutput)
     }
 
     func testSearchButtonCallsDelegateMethod() {
         let mockVC = MockViewController()
-        let searchVC = SearchViewController(controllerOutput: mockVC)
+        let searchVC = SearchViewController()
+        searchVC.delegate = mockVC
         searchVC.loadView()
         searchVC.searchButtonTapped(UIButton())
         XCTAssertTrue(mockVC.delegateMethodCalled)

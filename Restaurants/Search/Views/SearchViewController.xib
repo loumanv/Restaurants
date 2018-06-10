@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,6 +14,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="Restaurants" customModuleProvider="target">
             <connections>
+                <outlet property="locationSearchButton" destination="JHT-4k-Zi5" id="4L6-Hv-0kw"/>
                 <outlet property="searchButton" destination="CLw-Mf-2xi" id="MC9-do-Yrh"/>
                 <outlet property="searchField" destination="uIN-o0-7U2" id="Xc3-At-cjq"/>
                 <outlet property="searchTitle" destination="Z8W-NU-EDr" id="KvE-mD-KKU"/>
@@ -24,20 +26,20 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uIN-o0-7U2">
-                    <rect key="frame" x="37.5" y="242.5" width="300" height="30"/>
-                    <nil key="textColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Search by outcode&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8W-NU-EDr">
-                    <rect key="frame" x="37" y="225" width="139.5" height="17"/>
+                    <rect key="frame" x="40" y="169.5" width="140" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="SE19" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uIN-o0-7U2">
+                    <rect key="frame" x="38" y="186.5" width="300" height="39"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLw-Mf-2xi">
-                    <rect key="frame" x="37.5" y="282.5" width="300" height="30"/>
+                    <rect key="frame" x="38" y="235.5" width="300" height="39"/>
                     <color key="backgroundColor" red="0.17255112171750298" green="0.40726954402870685" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <state key="normal" title="&lt;Search&gt;">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -46,15 +48,28 @@
                         <action selector="searchButtonTapped:" destination="-1" eventType="touchUpInside" id="AwA-Jd-hWk"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHT-4k-Zi5">
+                    <rect key="frame" x="299" y="186.5" width="39" height="39"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="JHT-4k-Zi5" secondAttribute="height" multiplier="1:1" id="Zbd-CY-9O0"/>
+                    </constraints>
+                    <state key="normal" image="location"/>
+                    <connections>
+                        <action selector="locationButtonTapped:" destination="-1" eventType="touchUpInside" id="1Z3-yE-Dsf"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="uIN-o0-7U2" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" multiplier="0.75" id="7Vs-O9-CVe"/>
-                <constraint firstItem="uIN-o0-7U2" firstAttribute="leading" secondItem="Z8W-NU-EDr" secondAttribute="leading" id="88N-WT-hdz"/>
+                <constraint firstItem="JHT-4k-Zi5" firstAttribute="height" secondItem="uIN-o0-7U2" secondAttribute="height" id="0af-kp-vuA"/>
+                <constraint firstItem="uIN-o0-7U2" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" multiplier="0.6" id="7Vs-O9-CVe"/>
                 <constraint firstItem="CLw-Mf-2xi" firstAttribute="width" secondItem="uIN-o0-7U2" secondAttribute="width" id="GZM-V2-gOl"/>
                 <constraint firstItem="uIN-o0-7U2" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="J3H-Xj-a29"/>
+                <constraint firstItem="JHT-4k-Zi5" firstAttribute="top" secondItem="uIN-o0-7U2" secondAttribute="top" id="KCW-oV-cvW"/>
                 <constraint firstItem="CLw-Mf-2xi" firstAttribute="height" secondItem="uIN-o0-7U2" secondAttribute="height" id="LSU-hx-Wri"/>
+                <constraint firstItem="Z8W-NU-EDr" firstAttribute="leading" secondItem="uIN-o0-7U2" secondAttribute="leading" constant="2" id="bG0-ZX-hbi"/>
                 <constraint firstItem="CLw-Mf-2xi" firstAttribute="top" secondItem="uIN-o0-7U2" secondAttribute="bottom" constant="10" id="fkt-Hj-8y4"/>
+                <constraint firstItem="JHT-4k-Zi5" firstAttribute="trailing" secondItem="uIN-o0-7U2" secondAttribute="trailing" id="gao-QR-A0k"/>
                 <constraint firstItem="uIN-o0-7U2" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.8" id="pZ7-tg-ODU"/>
                 <constraint firstItem="CLw-Mf-2xi" firstAttribute="centerX" secondItem="uIN-o0-7U2" secondAttribute="centerX" id="tj3-vc-sT1"/>
                 <constraint firstItem="uIN-o0-7U2" firstAttribute="top" secondItem="Z8W-NU-EDr" secondAttribute="bottom" id="vKq-zm-Ozj"/>
@@ -63,4 +78,7 @@
             <point key="canvasLocation" x="24.5" y="51.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="location" width="39" height="39"/>
+    </resources>
 </document>

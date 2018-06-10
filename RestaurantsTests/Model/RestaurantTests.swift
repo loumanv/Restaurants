@@ -16,6 +16,26 @@ class RestaurantTests: XCTestCase {
         XCTAssertNotNil(restaurant)
     }
 
+    func testThrowsErrorWhenIdIsMissing() {
+        let dictionary: JSONDictionary = [
+            "Name": "Napoli Pizza",
+            "RatingStars": 5.5
+        ]
+        XCTAssertThrowsError(try Restaurant(dictionary: dictionary)) { error in
+            XCTAssertEqual(error as! RestaurantError, RestaurantError.missingRestaurantId)
+        }
+    }
+
+    func testThrowsErrorWhenNameIsMissing() {
+        let dictionary: JSONDictionary = [
+            "Id": 1038,
+            "RatingStars": 5.5
+            ]
+        XCTAssertThrowsError(try Restaurant(dictionary: dictionary)) { error in
+            XCTAssertEqual(error as! RestaurantError, RestaurantError.missingName)
+        }
+    }
+
     func testRestaurantJsonParseSucceeds() {
         let restaurant = Factory.createRestaurant()
         XCTAssertEqual(restaurant.restaurantId, 1038)

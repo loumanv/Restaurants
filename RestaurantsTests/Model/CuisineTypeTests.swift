@@ -16,6 +16,26 @@ class CuisineTypeTests: XCTestCase {
         XCTAssertNotNil(cuisineType)
     }
 
+    func testThrowsErrorWhenIdIsMissing() {
+        let dictionary: JSONDictionary = [
+            "Name": "Pizza",
+            "SeoName": "pizza"
+        ]
+        XCTAssertThrowsError(try CuisineType(dictionary: dictionary)) { error in
+            XCTAssertEqual(error as! CuisineTypeError, CuisineTypeError.missingCuisineTypeId)
+        }
+    }
+
+    func testThrowsErrorWhenNameIsMissing() {
+        let dictionary: JSONDictionary = [
+            "Id": 82,
+            "SeoName": "pizza"
+        ]
+        XCTAssertThrowsError(try CuisineType(dictionary: dictionary)) { error in
+            XCTAssertEqual(error as! CuisineTypeError, CuisineTypeError.missingName)
+        }
+    }
+
     func testCuisineTypeJsonParseSucceeds() {
         let cuisineType = Factory.createCuisineType()
         XCTAssertEqual(cuisineType.cuisineTypeId, 82)

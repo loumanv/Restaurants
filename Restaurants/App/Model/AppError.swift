@@ -6,7 +6,14 @@
 //  Copyright © 2018 Vasileios Loumanis. All rights reserved.
 //
 
-struct AppError: Error {
+struct AppError: Error, Equatable {
+
+    static let locationNotAvailable = AppError(localizedTitle: "Location Not Available",
+                                               localizedDescription: "Your current location is not available",
+                                               code: 0)
+    static let locationNotAuthorised = AppError(localizedTitle: "Location Not Available",
+                                                localizedDescription: "Please enable location services for this app",
+                                                code: 0)
 
     var localizedTitle: String
     var localizedDescription: String
